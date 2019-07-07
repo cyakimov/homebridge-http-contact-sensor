@@ -45,7 +45,7 @@ ContactSensorAccessory.prototype = {
 
         isDoorClosed: function (callback) {
                 if (this.statusUrl != null) {
-                        https.get(this.statusUrl, (resp) => {
+                        http.get(this.statusUrl, (resp) => {
                                 let data = '';
                                 resp.on('data', (chunk) => {
                                         data += chunk;
@@ -78,7 +78,7 @@ ContactSensorAccessory.prototype = {
                 informationService
                         .setCharacteristic(Characteristic.Manufacturer, "ContactSensor")
                         .setCharacteristic(Characteristic.Model, "FrontDoor")
-                        .setCharacteristic(Characteristic.SerialNumber, "Version 1.0.1");
+                        .setCharacteristic(Characteristic.SerialNumber, "Version 1.0.2");
 
                 this.service
                         .getCharacteristic(Characteristic.ContactSensorState)
