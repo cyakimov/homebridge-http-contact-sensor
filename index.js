@@ -6,7 +6,7 @@ module.exports = function (homebridge) {
         Service = homebridge.hap.Service;
         Characteristic = homebridge.hap.Characteristic;
         ContactState = homebridge.hap.Characteristic.ContactSensorState;
-        homebridge.registerAccessory("homebridge-http-contact-sensor", "Contact Sensor", ContactSensorAccessory);
+        homebridge.registerAccessory("homebridge-http-contact-sensor", "ContactSensor", ContactSensorAccessory);
 };
 
 function ContactSensorAccessory(log, config) {
@@ -76,9 +76,9 @@ ContactSensorAccessory.prototype = {
                 var informationService = new Service.AccessoryInformation();
 
                 informationService
-                        .setCharacteristic(Characteristic.Manufacturer, "Contact Sensor")
+                        .setCharacteristic(Characteristic.Manufacturer, "ContactSensor")
                         .setCharacteristic(Characteristic.Model, "FrontDoor")
-                        .setCharacteristic(Characteristic.SerialNumber, "Version 1.0.0");
+                        .setCharacteristic(Characteristic.SerialNumber, "Version 1.0.1");
 
                 this.service
                         .getCharacteristic(Characteristic.ContactSensorState)
