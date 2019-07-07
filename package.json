@@ -1,0 +1,21 @@
+{
+  "name": "homebridge-http-contact-sensor",
+  "version": "1.0.0",
+  "description": "Door/Contact sensor plugin for Homebridge",
+  "keywords": [
+    "homebridge-plugin",
+    "door sensor",
+    "contact sensor"
+  ],
+  "license": "MIT",
+  "author": "Carlos Yakimov <cyakimov@gmail.com>",
+  "dependencies": {},
+  "engines": {
+    "node": ">=8.0.0",
+    "homebridge": ">=0.4.20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cyakimov/homebridge-http-contact-sensor.git"
+  }
+}
