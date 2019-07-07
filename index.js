@@ -78,7 +78,7 @@ ContactSensorAccessory.prototype = {
                 informationService
                         .setCharacteristic(Characteristic.Manufacturer, "ContactSensor")
                         .setCharacteristic(Characteristic.Model, "FrontDoor")
-                        .setCharacteristic(Characteristic.SerialNumber, "Version 1.0.2");
+                        .setCharacteristic(Characteristic.SerialNumber, "Version 1.0.3");
 
                 this.service
                         .getCharacteristic(Characteristic.ContactSensorState)
