@@ -51,7 +51,7 @@ ContactSensorAccessory.prototype = {
                                         data += chunk;
                                 });
                                 resp.on('end', () => {
-                                        callback(parseInt(data));
+                                        callback(parseInt(data) || 0);
                                 });
                         }).on("error", (err) => {
                                 console.error("Error: " + err.message);
@@ -62,7 +62,7 @@ ContactSensorAccessory.prototype = {
 
         getContactSensorState: function (callback) {
                 this.isDoorClosed((state) => {
-                        this.isClosed = state;
+                         this.isClosed = parseInt(state) || 0;
                         this.log("getContactSensorState: ", this.isClosed);
                         callback(null, this.isClosed);
                 });
